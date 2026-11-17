@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header>
+    <h1>Happy Birthday!</h1>
+    <button id="theme-toggle" aria-label="Toggle Theme">Light Mode</button>
+  </header>
+
+  <main>
+    <section class="form-card">
+      <h2>Leave a Wish & Photo</h2>
+      <form id="wish-form">
+        <input type="text" id="sender" placeholder="Your Name" required />
+        <textarea id="message" rows="3" placeholder="Write your birthday note..." required></textarea>
+        <label class="file-label">
+          <span>Add a Photo (Optional)</span>
+          <input type="file" id="photo" accept="image/*" />
+        </label>
+        <button type="submit" id="submit-btn">Post Wish</button>
+      </form>
+    </section>
+
+    <section id="wishes-feed" class="feed-grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
